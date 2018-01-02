@@ -1,0 +1,71 @@
+
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <button type="button" class="btn btn-primary col-lg-3"
+                (click)="registeremail(registeremailtemplate)"
+                tooltip="register your email to receive our offers.">
+            Register Email Here
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+    <!--<div class="panel-group panel-primary">-->
+    <div class="panel panel-info col-md-12 row">
+        <div class="panel-header"><h1>Change your life</h1></div>
+        <div class="panel-body">
+            <div class="well">
+                <div class="lead">
+                    <h2>
+                        “It doesn’t matter where you are, you are nowhere compared to where you can go.” – Bob Proctor
+                    </h2>
+                </div>
+            </div>
+            <img class="shophere img-thumbnail pull-left"
+                 src="assets/shared/images/shopnow.jpg" />
+            <h3>
+
+                Many times, the only way to improve our lives is to force ourselves to undergo difficult change. That might mean breaking up and leaving a stale – but comfortable – relationship, leaving a mediocre – but stable – job, moving away from a nice – but uninspiring – location, or anything else that’s holding us back from accomplishing our dreams.
+            </h3>
+            <h3>
+                Of course, dealing with uninvited change in our lives is often difficult and painful. In many cases, instigating major, but necessary, change in our life can be just as painful. But whatever change you’re dealing with, know that how you cope with that change will have an impact on your future.
+            </h3>
+        </div>
+    </div>
+    <!--</div>-->
+    <div class="img-thumbnail pull-left">
+        <!--<div><h1>Home page js loading</h1></div>-->
+        <!--src="../../shared/images/shopnow.jpg" />-->
+        <!--src="../../shared/images/shopnow.jpg"-->
+
+    </div>
+</div>
+
+<ng-template #registeremailtemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Register</h4>
+        <button type="button" class="close pull-right"
+                aria-label="Close" (click)="modelRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+
+
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input class="form-control" type="text" id="email" name="email" #titleInput placeholder="enter your email" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="register(titleInput.value)">
+            Register
+        </button>
+    </div>
+</ng-template>

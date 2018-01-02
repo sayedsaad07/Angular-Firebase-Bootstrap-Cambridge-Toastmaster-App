@@ -1,4 +1,10 @@
-# Ctoastmaster
+# Angular-Firebase-Bootstrap-Cambridge-Toastmaster-App
+
+This Scaffold app for angular 2, firebase, bootstrap, ng-bootstrap
+A simple app to help my favorite toastmaster meetup to track members progress through speech evaluations.
+Having bootstrap makes it more mobile friendly app.
+
+This app is using firebase authentication and database to save speakers info and evaluations. It will also allow measure time of the speaker's speech.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
