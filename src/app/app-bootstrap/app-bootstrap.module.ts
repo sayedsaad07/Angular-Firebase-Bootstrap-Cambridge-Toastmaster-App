@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { AlertModule } from "ngx-bootstrap";
+//import { AlertModule } from "ngx-bootstrap";
 
 @NgModule({
   imports: [
     CommonModule,
-    AlertModule.forRoot(),
+    //AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot()

@@ -1,8 +1,10 @@
 import {Component} from "@angular/core";
-import {AuthService} from "app/shared/auth.service";
+
 import {Observable, BehaviorSubject} from "rxjs";
 import {Router} from "@angular/router";
-import { UserInfo } from "app/shared/user-info";
+import { UserInfo } from "../../shared/user-info";
+import { AuthService } from "../../shared/auth.service";
+
 
 @Component({
     selector: 'app-home-page',
@@ -14,7 +16,7 @@ export class HomePageComponent {
     isLoggedIn = new BehaviorSubject(false);
 
     constructor(private authService: AuthService, private router: Router) {
-        this.userInfo = authService.userInfo;
+        this.userInfo = authService.userInfo.asObservable();
         this.userInfo
             .map(userInfo => !userInfo.isAnonymous)
             .subscribe(this.isLoggedIn);

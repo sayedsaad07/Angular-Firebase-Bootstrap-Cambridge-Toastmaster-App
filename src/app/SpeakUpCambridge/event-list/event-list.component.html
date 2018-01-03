@@ -1,0 +1,40 @@
+<div class="row">
+    <h1> welcome to speak-up events</h1>
+</div>
+
+<div class="row" *ngIf="isLoggedIn|async">
+    <a class="btn btn-primary"
+       [routerLink]="['/admin/events/add']">Add Event</a>
+    <a class="btn btn-primary"
+       (click)="showDoneOnly()">Show upcoming Event</a>
+    <a class="btn btn-primary"
+       (click)="showAll()">Show All</a>
+</div>
+<div class="row" *ngIf="isLoggedIn|async">
+    <table class="table table-inverse table-striped table-bordered">
+        <thead class="thead-inverse">
+            <tr>
+                <th>Event</th>
+                <th>Details </th>
+                <th>Starts On </th>
+                <th>Ends On </th>
+                <th>Over</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let currentEvent of eventList | async" fxLayoutAlign="space-between center">
+            <tr>
+                <td>{{currentEvent.name}}</td>
+                <td>{{currentEvent.description}}</td>
+                <td>{{currentEvent.startdate | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                <td>{{currentEvent.enddate | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                <!--<td>{{currentEvent.userid}}</td>-->
+                <td> <input type="checkbox" [ngModel]="currentEvent.isDone" disabled="disabled" /> </td>
+                <!--<td> <a class="btn btn-primary"  (click)="saveEvent(currentEvent)">Save</a> </td>-->
+                <td>
+                    <a class="btn btn-primary"
+                       [routerLink]="['/admin/events/edit', currentEvent.$key]">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -16,13 +16,6 @@ import { DashboardPageComponent } from './pages/dashboard-page.component';
 import { AllInOnePageComponent } from './pages/all-in-one-page.component';
 import { AdminComponent } from './admin/admin.component';
 
-import { LoggedInGuard } from '../shared/logged-in-guard';
-import { AuthService } from '../shared/auth.service';
-
-import { firebaseConfig } from '../../environments/firebaseConfig';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 
@@ -35,10 +28,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig, "speak-up-cambridge"),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
     AdminRoutingModule
   ],
   declarations: [
@@ -52,7 +41,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     LoginPageComponent,
     DashboardPageComponent,
     AdminComponent]
-  , providers: [AuthService, LoggedInGuard]
-  , exports: [RouterModule]
+  , providers: []
+    , exports: [RouterModule]
 })
 export class AdminModule { }

@@ -16,26 +16,39 @@ import { AllInOnePageComponent } from './pages/all-in-one-page.component';
 
 import { LoggedInGuard } from '../shared/logged-in-guard';
 import { AuthService } from '../shared/auth.service';
+import { EventListComponent, EventEditComponent } from '../SpeakUpCambridge/event-list.index';
 
 
 const adminRoutes: Routes = [
-  {
-    path: 'admin',
-    component: AdminComponent,
-    children: [
-      { path: 'register', component: RegisterPageComponent },
-      { path: 'all-in-one', component: AllInOnePageComponent },
-      { path: 'reset-password', component: ResetPasswordComponent },
-      { path: 'login', component: LoginPageComponent },
-      { path: 'dashboard', component: DashboardPageComponent, canActivate: [LoggedInGuard] },
-      { path: '', component: HomePageComponent }
-    ]
-  }
+    {
+        path: 'admin',
+        component: AdminComponent,
+        children: [
+            { path: 'register', component: RegisterPageComponent },
+            { path: 'all-in-one', component: AllInOnePageComponent },
+            { path: 'reset-password', component: ResetPasswordComponent },
+            { path: 'login', component: LoginPageComponent },
+            { path: 'dashboard', component: DashboardPageComponent, canActivate: [LoggedInGuard] }
+            , {
+                path: 'events'
+                //, canActivateChild: [LoggedInGuard]//, component: EventListComponent, canActivate: [LoggedInGuard]
+                , children: [
+                    { path: 'list', component: EventListComponent, canActivate: [LoggedInGuard] }
+                    , { path: 'edit/:id', component: EventEditComponent, canActivate: [LoggedInGuard] }
+                    , {
+                        path: 'add', redirectTo: 'edit/new'
+                    } //component: EventEditComponent, canActivate: [LoggedInGuard] }
+                    , { path: '', component: EventListComponent }
+                ]
+            }
+            , { path: '', component: HomePageComponent }
+        ]
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(adminRoutes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(adminRoutes)],
+    exports: [RouterModule]
 })
 export class AdminRoutingModule { }
 

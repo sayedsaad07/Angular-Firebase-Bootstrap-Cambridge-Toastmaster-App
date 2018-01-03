@@ -3,7 +3,11 @@
     <h1>{{_Timerinfo.ticks}} </h1>
     <a class="btn btn-primary"
        [ngClass]="{greenClass: !isstarted, redClass: isstarted}"
-       (click)="StartTimer()">Click {{[startstopstr]}}</a>
+       (click)="StartTimer()">
+        Click {{[startstopstr]}}
+        <span *ngIf="!isstarted" class="glyphicon glyphicon-play"></span>
+        <span *ngIf="isstarted" class="glyphicon glyphicon-pause"></span>
+    </a>
     <!--<a class="btn btn-primary"
        (click)="StopTimer()">Stop Task</a>-->
 </div>
