@@ -1,9 +1,8 @@
 export const firebaseConfig = {
-  // Paste all this from the Firebase console...
-  apiKey: "AIzaSyD3iyIIaVWd2BqjXVD8RF3lOMtjlGNhw-Y",
-  authDomain: "barbernow-0001.firebaseapp.com",
-  databaseURL: "https://barbernow-0001.firebaseio.com",
-  storageBucket: "",
-  messagingSenderId: "barbernow-0001"
+    apiKey: "AIzaSyDTH4wxcA64fI1sKGdWH9jFno97YRR7v8k",
+    authDomain: "speakupcambridge.firebaseapp.com",
+    databaseURL: "https://speakupcambridge.firebaseio.com",
+    projectId: "speakupcambridge",
+    storageBucket: "speakupcambridge.appspot.com",
+    messagingSenderId: "564726901800"
 };
-

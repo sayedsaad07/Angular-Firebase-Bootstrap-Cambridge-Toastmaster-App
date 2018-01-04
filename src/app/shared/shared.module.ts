@@ -16,7 +16,7 @@ import { AppTimerService } from './timer/app-timer.service';
     imports: [
         CommonModule,
         HttpModule,
-        AngularFireModule.initializeApp(firebaseConfig, "speak-up-cambridge"),
+        AngularFireModule.initializeApp(firebaseConfig, "speakupcambridge"),
         AngularFireDatabaseModule,
         AngularFireAuthModule
     ],
