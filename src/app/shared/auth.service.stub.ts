@@ -22,7 +22,7 @@ export class AuthServiceStub {
         if (this.loggedin) {
             replaySubject.next(userInfo);
         }
-        return replaySubject;
+        return replaySubject.asObservable();
     }
 
     isLoggedIn(): Observable<boolean> {

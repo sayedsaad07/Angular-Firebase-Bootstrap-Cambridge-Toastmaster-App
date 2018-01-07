@@ -23,8 +23,10 @@ export class LoginPageComponent {
     navigateToResetPassword($event) {
         this.router.navigate(['/admin/reset-password']);
     }
-
+    navigateToRegister() {
+        this.router.navigate(['/admin/register']);
+    }
     navigateToHome() {
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/admin/events']);
     }
 }

@@ -24,6 +24,8 @@
         "bootstrap": "3.3.7",
         "core-js": "2.4.1",
         "firebase": "4.0.0",
+        "node-sass": "^4.7.2",
+        "font-awesome": "^4.7.0",
         "ngx-bootstrap": "1.9.1",
         "rxjs": "5.4.1",
         "ts-helpers": "1.1.2",
@@ -40,12 +42,13 @@
         "karma": "1.4.1",
         "karma-chrome-launcher": "2.0.0",
         "karma-cli": "1.0.1",
+        "karma-coverage-istanbul-reporter": "0.2.0",
         "karma-jasmine": "1.1.0",
         "karma-jasmine-html-reporter": "0.2.2",
-        "karma-coverage-istanbul-reporter": "0.2.0",
         "protractor": "5.1.0",
         "ts-node": "3.0.2",
         "tslint": "4.5.0",
-        "typescript": "~2.3.2"
+        "typescript": "~2.3.2",
+        "webpack": "^3.10.0"
     }
 }

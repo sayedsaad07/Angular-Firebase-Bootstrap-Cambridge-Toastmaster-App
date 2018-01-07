@@ -1,10 +1,14 @@
 <h3>Please Log In</h3>
 <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6">
-        <a href="#" class="btn btn-lg btn-primary btn-block" (click)="loginVia($event, 'twitter')">Twitter</a>
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-6">
-        <a href="#" class="btn btn-lg btn-info btn-block" (click)="loginVia($event, 'google')">Google</a>
+    <div class="social-buttons">
+        <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+        <a class="btn btn-block btn-social btn-facebook" (click)="loginVia($event, 'facebook')">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+        </a>
+
+        <a class="btn btn-block btn-social btn-google" (click)="loginVia($event, 'google')">
+            <span class="fa fa-google"></span> Sign in with Google
+        </a>
     </div>
 </div>
 <div class="login-or">
@@ -35,5 +39,8 @@
     </div>
     <button type="submit" class="btn btn btn-primary">
         Log In
+    </button>
+    <button type="button" class="btn btn btn-info" (click)="naviateToregister()">
+        Register
     </button>
 </form>

@@ -33,7 +33,6 @@ export class EventAttendeeEditComponent implements OnInit {
     @Input() attendeeKey_Input: Subject<string>;
 
     //set attendeeKey_Input(name: string) {
-
     //    console.log("input name " + this._attendeeKey_Input);
     //}
     //get attendeeKey_Input(): string {
@@ -100,5 +99,8 @@ export class EventAttendeeEditComponent implements OnInit {
         attendee.speechDuration = data.ticks;
     }
 
+    HideSpeakerInfo() {
+        this.isAvailable = false;
+    }
 
 }

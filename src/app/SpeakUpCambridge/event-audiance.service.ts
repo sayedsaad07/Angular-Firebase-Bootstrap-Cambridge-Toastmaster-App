@@ -34,9 +34,10 @@ export class EventAudianceService {
         //this.speakUpEvent$ = this.db.object('speakUpEvent');
     }
 
-    getCurrentAttendee(attendeeKey: string) {
-        return this.db.object(`speakUpEventAudienace/${attendeeKey}`)
-            .catch(this.errorHandler);
+    getCurrentAttendee(attendeeKey: string): FirebaseObjectObservable<eventAudience>
+    {
+        return this.db.object(`speakUpEventAudienace/${attendeeKey}`);
+            //.catch(this.errorHandler);
     }
 
     geteventAudienceList(eventKey: string) {

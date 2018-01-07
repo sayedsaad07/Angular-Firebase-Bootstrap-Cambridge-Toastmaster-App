@@ -126,10 +126,10 @@ export class AuthService {
                 .catch(err => result.error(err));
             return result.asObservable();
         }
-        else if (provider === "twitter") {
+        else if (provider === "facebook") {
             this.angularFireAuth
                 .auth
-                .signInWithPopup(new firebase.auth.TwitterAuthProvider())
+                .signInWithPopup(new firebase.auth.FacebookAuthProvider())
                 .then(auth => result.next("success"))
                 .catch(err => result.error(err));
             return result.asObservable();

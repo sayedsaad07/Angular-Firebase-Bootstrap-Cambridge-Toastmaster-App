@@ -16,13 +16,6 @@ import { DashboardPageComponent } from './pages/dashboard-page.component';
 import { AllInOnePageComponent } from './pages/all-in-one-page.component';
 import { AdminComponent } from './admin/admin.component';
 
-
-
-
-
-
-
-
 @NgModule({
   imports: [
     CommonModule,

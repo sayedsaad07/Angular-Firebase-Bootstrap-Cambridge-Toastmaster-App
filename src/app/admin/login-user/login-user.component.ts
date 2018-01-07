@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Output} from "@angular/core";
-import {AuthService} from "app/shared/auth.service";
+import {AuthService} from "../../shared/auth.service";
 import {FormBuilder, Validators, AbstractControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -13,6 +13,7 @@ export class LoginUserComponent {
     password: AbstractControl;
     @Output() onSuccess = new EventEmitter();
     @Output() onError = new EventEmitter();
+    @Output() onregister = new EventEmitter();
 
     constructor(private authService: AuthService, private fb: FormBuilder) {
         this.form = fb.group({
@@ -42,5 +43,9 @@ export class LoginUserComponent {
             () => this.onSuccess.emit(),
             err => this.onError.emit(err)
         );
+    }
+
+    naviateToregister() {
+        this.onregister.emit();
     }
 }

@@ -1,3 +1,23 @@
+//export class eventAudience {
+//    public $key: string;
+//    sayedsaaduserkey: string = "C0yHY8o2tEZbVMKCtDTIsbZqKwJ3";
+//    constructor(public eventkey: string,
+//        public name: string,
+//        public email: string,
+//        public subject: string,
+//        public topic: string,
+//        public speechDuration: string,
+//        public showup: boolean = false,
+//        public userid: string = null) {
+
+//        if (this.speechDuration === null || this.speechDuration === undefined || this.speechDuration === '') {
+//            this.speechDuration = "mm:SS";
+//        }
+//        if (userid === null) {
+//            this.userid = this.sayedsaaduserkey;
+//        }
+//    }
+//}
 export class eventAudience {
     public $key: string;
     public eventkey: string;
@@ -16,11 +36,11 @@ export class eventAudience {
     //}
     sayedsaaduserkey: string = "C0yHY8o2tEZbVMKCtDTIsbZqKwJ3";
     constructor(eventkey: string, name: string,
-                    email: string,
-                    subject: string,
-                    topic: string, speechDuration: string,
-                    showup: boolean = false,
-                    user: string = null) {
+        email: string,
+        subject: string,
+        topic: string, speechDuration: string,
+        showup: boolean = false,
+        user: string = null) {
         this.eventkey = eventkey;
         this.name = name;
         this.email = email;

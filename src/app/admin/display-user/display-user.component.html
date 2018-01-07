@@ -7,7 +7,7 @@
                 <li class="list-group-item">Display Name: {{user.displayName}}</li>
                 <li class="list-group-item">Uid: {{user.uid}}</li>
                 <li class="list-group-item">Provider Id: {{user.providerId}}</li>
-                <li class="list-group-item" *ngIf="user.photoURL"><img
+                <li class="list-group-item" *ngIf="user.photoURL"><img class="img-thumbnail pull-left"
                         [src]="user.photoURL"/></li>
             </ul>
         </div>

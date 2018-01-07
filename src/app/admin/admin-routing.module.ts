@@ -28,6 +28,8 @@ const adminRoutes: Routes = [
             { path: 'all-in-one', component: AllInOnePageComponent },
             { path: 'reset-password', component: ResetPasswordComponent },
             { path: 'login', component: LoginPageComponent },
+            
+            { path: 'profile', component: DisplayUserComponent, canActivate: [LoggedInGuard] },
             { path: 'dashboard', component: DashboardPageComponent, canActivate: [LoggedInGuard] }
             , {
                 path: 'events'
@@ -38,10 +40,12 @@ const adminRoutes: Routes = [
                     , {
                         path: 'add', redirectTo: 'edit/new'
                     } //component: EventEditComponent, canActivate: [LoggedInGuard] }
+                    , { path: 'all', component: EventListComponent }
                     , { path: '', component: EventListComponent }
                 ]
             }
             , { path: '', component: HomePageComponent }
+            
         ]
     }
 ];
